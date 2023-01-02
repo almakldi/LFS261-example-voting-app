@@ -14,7 +14,6 @@ pipeline {
         steps{
           echo 'Compiling worker app..'
           dir('worker'){
-            sh 'mvn dependency:resolve -X'
             sh 'mvn -X compile'
           }
         }
